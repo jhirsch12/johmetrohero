@@ -12,6 +12,7 @@ services:
       - .:/app
     env_file:
       - .env
+    restart: always
   db:
     image: postgres
     restart: always
