@@ -7,7 +7,7 @@ services:
       context: .
       target: build  # We want maven hot reloading. Do not build all the way for the prod image.
     ports:
-      - 8080:8080
+      - 9443:9443
     volumes:
       - .:/app
     env_file:
