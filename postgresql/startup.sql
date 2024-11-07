@@ -394,6 +394,18 @@ CREATE TABLE public.api_user (
 
 ALTER TABLE public.api_user OWNER TO postgres;
 
+-- Insert a row with a valid API key into the api_user table
+INSERT INTO public.api_user (api_key, activation_date, email_address, is_blocked, max_calls_per_day, max_calls_per_second, name)
+VALUES (
+    'E04C76D9915828EB',            -- Replace with an actual key
+    NOW(),                          -- Sets the activation date to the current timestamp
+    'user@example.com',             -- Replace with a real email
+    FALSE,                          -- Sets the user as not blocked
+    50000,                           -- Maximum calls allowed per day
+    100,                             -- Maximum calls allowed per second
+    'admin'                     -- Replace with the desired name
+);
+
 --
 -- Name: daily_service_report; Type: TABLE; Schema: public; Owner: postgres
 --
